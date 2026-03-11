@@ -9,6 +9,38 @@ node_modules/
 
 # Ignore build directories
 build/
+dist/
+*.egg-info/
 
 # Ignore environment variable files
 .env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Model files
+*.h5
+*.pkl
+*.joblib
+models/*.pt
+models/*.bin
+
+# Data
+data/*.csv
+data/*.json
