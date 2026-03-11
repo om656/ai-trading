@@ -51,9 +51,12 @@ class HybridAIAgent:
         """Train the model on the provided data."""
         if data.ndim == 1:
             data = data.reshape(-1, 1)
+        seq_len = min(10, len(data) - 1)
+        if seq_len < 2:
+            logger.warning("Insufficient data for training (need at least 3 samples)")
+            return
         # Create sequences
         X, y = [], []
-        seq_len = min(10, len(data) - 1)
         for i in range(seq_len, len(data)):
             X.append(data[i - seq_len : i])
             y.append(data[i, 0])

@@ -44,7 +44,10 @@ def interactive_mode(agent):
                 break
             if not command:
                 continue
-            response = agent.process_command(command)
+            try:
+                response = agent.process_command(command)
+            except Exception as exc:
+                response = f"Error processing command: {exc}"
             print(response)
             print()
         except KeyboardInterrupt:

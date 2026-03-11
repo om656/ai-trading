@@ -36,9 +36,13 @@ class Position:
             self.trailing_stop = current_price * (1 + trailing_pct)
 
     def should_stop_out(self, current_price: float) -> bool:
+        effective_stop = max(self.stop_loss, self.trailing_stop)
         if self.direction == "long":
-            return current_price <= max(self.stop_loss, self.trailing_stop)
-        return current_price >= min(self.stop_loss, self.trailing_stop) if self.stop_loss > 0 else False
+            return current_price <= effective_stop
+        # For short positions, stop out when price rises above stop level
+        if self.stop_loss > 0:
+            return current_price >= min(self.stop_loss, self.trailing_stop)
+        return False
 
     def to_dict(self) -> dict:
         return {

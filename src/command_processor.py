@@ -115,8 +115,9 @@ class CommandProcessor:
             return "No trade history."
         lines = ["Trade History:", "-" * 60]
         for trade in history[-20:]:  # Last 20 trades
+            ts = str(trade.get("timestamp", ""))[:19]
             lines.append(
-                f"  {trade['timestamp'][:19]} | {trade['action']:5s} | "
+                f"  {ts} | {trade['action']:5s} | "
                 f"{trade['symbol']:6s} | {trade.get('shares', 0)} shares @ "
                 f"${trade.get('price', trade.get('exit_price', 0)):.2f}"
             )
