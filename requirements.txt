@@ -7,3 +7,14 @@ matplotlib
 seaborn
 statsmodels
 ccxt
+
+# News-driven trading system
+requests
+beautifulsoup4
+lxml
+nltk
+textblob
+transformers
+torch
+yfinance
+jupyterlab
