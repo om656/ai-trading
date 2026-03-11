@@ -12,3 +12,9 @@ build/
 
 # Ignore environment variable files
 .env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
