@@ -1,3 +1,4 @@
+# Core data / ML
 numpy
 pandas
 scikit-learn
@@ -6,4 +7,27 @@ keras
 matplotlib
 seaborn
 statsmodels
+
+# Crypto exchange connectivity
 ccxt
+
+# NLP & sentiment
+nltk
+requests
+transformers
+torch
+
+# GUI
+PyQt6
+
+# System monitoring
+psutil
+
+# Encrypted config storage
+cryptography
+
+# EXE packaging (dev/build only)
+pyinstaller
+
+# Windows shortcuts (optional, Windows only)
+pywin32; sys_platform == "win32"

@@ -12,3 +12,23 @@ build/
 
 # Ignore environment variable files
 .env
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.venv/
+
+# Distribution / packaging
+dist/
+*.egg-info/
+
+# PyInstaller artifacts
+*.spec
+version_info.txt
+
+# App config directory (may contain encrypted secrets)
+AITrading/
